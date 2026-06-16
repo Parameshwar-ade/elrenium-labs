@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Global Workforce | Elrenium Labs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
+    <div class="nav-actions">
+      <a href="client-inquiry.html" class="quote-btn outline">Request Quote</a>
+      <a href="index.html" class="join-btn">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- FORM CONTAINER -->
+  <div class="form-container">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h1>Apply for the Global Talent Network</h1>
+        <p>Linguists, annotators, and AI subject specialists. Submit credentials below to access premium contract projects.</p>
+      </div>
+
+      <!-- PASTE YOUR GOOGLE SHEET API OR GATEWAY LINK HERE -->
+      <form action="https://script.google.com/macros/s/AKfycbx4X5Z19GuyNc53BtaLo3pCEke5qMKu2DvjZAJN5zqyoEHi9QgWH3q3bwg1b1y6kEvv_Q/exec" method="POST">
+        
+        <div class="form-section">
+          <h3>Candidate Profile</h3>
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="Freelancer Full Name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="Freelancer Email" placeholder="janesmith@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Country of Residence *</label>
+            <input type="text" id="country" name="Freelancer Country" placeholder="India" required>
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Handle / Professional Profile</label>
+            <input type="url" id="linkedin" name="Freelancer LinkedIn" placeholder="https://linkedin.com/in/username">
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Expertise Segments *</h3>
+          <div class="form-group">
+            <label>Select All Domains You Are Vetted In:</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item"><input type="checkbox" id="translation" name="Skill: Translation" value="Yes"><label for="translation">Native Translation</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="transcription" name="Skill: Transcription" value="Yes"><label for="transcription">Audio Transcription</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="dataAnnotation" name="Skill: Data Annotation" value="Yes"><label for="dataAnnotation">Text/LLM Annotation</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="imageAnnotation" name="Skill: Image Annotation" value="Yes"><label for="imageAnnotation">Computer Vision Tagging</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="voiceCollection" name="Skill: Voice Collection" value="Yes"><label for="voiceCollection">Voice Sourcing</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="aiTraining" name="Skill: AI Training" value="Yes"><label for="aiTraining">RLHF Evaluation</label></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Metrics & Operational Window</h3>
+          <div class="form-group">
+            <label for="experience">Years of Experience in Domain *</label>
+            <input type="number" id="experience" name="Freelancer Experience Years" min="0" placeholder="e.g., 3" required>
+          </div>
+          <div class="form-group">
+            <label for="languages">Working Languages (Native & Professional fluent) *</label>
+            <input type="text" id="languages" name="Freelancer Languages" placeholder="e.g., Hindi, English" required>
+          </div>
+          <div class="form-group">
+            <label>Weekly Operational Availability *</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="fullTime" name="Freelancer Availability" value="Full-Time" required><label for="fullTime">Full-Time (40+ hrs/wk)</label></div>
+              <div class="radio-item"><input type="radio" id="partTime" name="Freelancer Availability" value="Part-Time" required><label for="partTime">Part-Time (20 hrs/wk)</label></div>
+              <div class="radio-item"><input type="radio" id="projectBasis" name="Freelancer Availability" value="Project Basis" required><label for="projectBasis">Contract Per Project</label></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Professional Statement</h3>
+          <div class="form-group">
+            <label for="whyHire">Outline your unique specialized skills or tooling expertise *</label>
+            <textarea id="whyHire" name="Freelancer Pitch" placeholder="Detail any specialized translation tools, annotation frameworks, or domain experience..." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Global Application</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Elrenium Labs. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

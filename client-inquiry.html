@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Solution Proposal | Elrenium Labs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
+    <div class="nav-actions">
+      <a href="freelancer.html" class="quote-btn outline">Apply as Talent</a>
+      <a href="index.html" class="join-btn">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- FORM CONTAINER -->
+  <div class="form-container">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h1>Request a Solution Quote</h1>
+        <p>Provide your target specifications, and our solution architects will map out a production plan within 24 hours.</p>
+      </div>
+
+      <!-- PASTE YOUR GOOGLE SHEET API OR GATEWAY LINK HERE -->
+      <form action="https://script.google.com/macros/s/AKfycbx4X5Z19GuyNc53BtaLo3pCEke5qMKu2DvjZAJN5zqyoEHi9QgWH3q3bwg1b1y6kEvv_Q/exec" method="POST">
+        
+        <div class="form-section">
+          <h3>Corporate Profile</h3>
+          <div class="form-group">
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" name="Client Full Name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company/Organization *</label>
+            <input type="text" id="company" name="Company Name" placeholder="AI Research Corp" required>
+          </div>
+          <div class="form-group">
+            <label for="workEmail">Corporate Email *</label>
+            <input type="email" id="workEmail" name="Client Email" placeholder="johndoe@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Contact Number *</label>
+            <input type="tel" id="contactPhone" name="Client Phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Project Metrics</h3>
+          <div class="form-group">
+            <label for="serviceNeeded">Primary Data Capability Required *</label>
+            <select id="serviceNeeded" name="Requested Service" required>
+              <option value="">-- Choose Segment --</option>
+              <option value="Data Collection">Data Collection & Sourcing</option>
+              <option value="Annotation">Precision Annotation & Labeling</option>
+              <option value="Language Services">Multilingual Sourcing & Translation</option>
+              <option value="Media Services">Voiceover, Dubbing & Audio Inputs</option>
+              <option value="AI Training Data">RLHF, Tuning & Model Red-Teaming</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="projectDescription">Scope Description & Technical Parameters *</label>
+            <textarea id="projectDescription" name="Project Description" placeholder="Describe data volume formats, language metrics, or specific tooling criteria..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="deadline">Target Delivery Timeline *</label>
+            <input type="text" id="deadline" name="Project Deadline" placeholder="e.g., 4-week sprint, ongoing pipeline" required>
+          </div>
+          <div class="form-group">
+            <label for="budget">Allocated Budget Matrix (USD) *</label>
+            <input type="text" id="budget" name="Project Budget" placeholder="e.g., $10,000 - $25,000" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Solution Request</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Elrenium Labs. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
