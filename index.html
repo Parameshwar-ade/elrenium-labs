@@ -6,21 +6,30 @@
   <title>Elrenium Labs | Enterprise AI Data & Language Solutions</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
+ <nav class="navbar">
+  <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="mobile-menu" id="mobileMenu">
+
     <ul class="nav-links">
       <li><a href="#services">Capabilities</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#process">Our Workflow</a></li>
     </ul>
+
     <div class="nav-actions">
       <a href="client-inquiry.html" class="quote-btn outline">Request Quote</a>
       <a href="freelancer.html" class="join-btn">Apply as Talent</a>
     </div>
-  </nav>
+
+  </div>
+</nav>
 
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
@@ -53,7 +62,7 @@
   <section class="section" id="services">
     <div class="section-header">
       <div class="section-tag">CAPABILITIES</div>
-      <h2>Core Core Data Services</h2>
+      <h2>Core Data Services</h2>
       <p>Precision-engineered datasets for computer vision, NLP, and LLM alignment.</p>
     </div>
 
@@ -169,5 +178,16 @@
     </div>
   </footer>
 
+  <script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
 </body>
 </html>
