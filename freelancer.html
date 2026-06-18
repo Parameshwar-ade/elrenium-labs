@@ -9,11 +9,20 @@
 <body>
 
   <!-- NAVBAR -->
+ <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
-    <div class="nav-actions">
-      <a href="client-inquiry.html" class="quote-btn outline">Request Quote</a>
-      <a href="index.html" class="join-btn">Back to Home</a>
+    
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <!-- Added empty list to balance flex layout spacing -->
+      <ul class="nav-links"></ul>
+
+      <div class="nav-actions">
+        <a href="client-inquiry.html" class="quote-btn outline">Request Quote</a>
+        <a href="index.html" class="join-btn">Back to Home</a>
+      </div>
     </div>
   </nav>
 
@@ -25,7 +34,6 @@
         <p>Linguists, annotators, and AI subject specialists. Submit credentials below to access premium contract projects.</p>
       </div>
 
-      <!-- PASTE YOUR GOOGLE SHEET API OR GATEWAY LINK HERE -->
       <form action="https://script.google.com/macros/s/AKfycbx4X5Z19GuyNc53BtaLo3pCEke5qMKu2DvjZAJN5zqyoEHi9QgWH3q3bwg1b1y6kEvv_Q/exec" method="POST">
         
         <div class="form-section">
@@ -53,12 +61,34 @@
           <div class="form-group">
             <label>Select All Domains You Are Vetted In:</label>
             <div class="checkbox-group">
-              <div class="checkbox-item"><input type="checkbox" id="translation" name="Skill: Translation" value="Yes"><label for="translation">Native Translation</label></div>
-              <div class="checkbox-item"><input type="checkbox" id="transcription" name="Skill: Transcription" value="Yes"><label for="transcription">Audio Transcription</label></div>
-              <div class="checkbox-item"><input type="checkbox" id="dataAnnotation" name="Skill: Data Annotation" value="Yes"><label for="dataAnnotation">Text/LLM Annotation</label></div>
-              <div class="checkbox-item"><input type="checkbox" id="imageAnnotation" name="Skill: Image Annotation" value="Yes"><label for="imageAnnotation">Computer Vision Tagging</label></div>
-              <div class="checkbox-item"><input type="checkbox" id="voiceCollection" name="Skill: Voice Collection" value="Yes"><label for="voiceCollection">Voice Sourcing</label></div>
-              <div class="checkbox-item"><input type="checkbox" id="aiTraining" name="Skill: AI Training" value="Yes"><label for="aiTraining">RLHF Evaluation</label></div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="videoCollection" name="Skill: Video Data Collection" value="Yes">
+                <label for="videoCollection">Video Data Collection</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="translation" name="Skill: Translation" value="Yes">
+                <label for="translation">Native Translation</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="transcription" name="Skill: Transcription" value="Yes">
+                <label for="transcription">Audio Transcription</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="dataAnnotation" name="Skill: Data Annotation" value="Yes">
+                <label for="dataAnnotation">Text/LLM Annotation</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="imageAnnotation" name="Skill: Image Annotation" value="Yes">
+                <label for="imageAnnotation">Image Annotation</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="voiceSourcing" name="Skill: Voice Collection" value="Yes">
+                <label for="voiceSourcing">Voice Sourcing</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="aiTraining" name="Skill: AI Training" value="Yes">
+                <label for="aiTraining">RLHF Evaluation</label>
+              </div>
             </div>
           </div>
         </div>
@@ -100,5 +130,15 @@
     <p>&copy; 2026 Elrenium Labs. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+  </script>
 </body>
 </html>

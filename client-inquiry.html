@@ -9,11 +9,20 @@
 <body>
 
   <!-- NAVBAR -->
+ <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo">ELRENIUM<span class="logo-accent">LABS</span></a>
-    <div class="nav-actions">
-      <a href="freelancer.html" class="quote-btn outline">Apply as Talent</a>
-      <a href="index.html" class="join-btn">Back to Home</a>
+    
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <!-- Added empty list to balance flex layout spacing -->
+      <ul class="nav-links"></ul>
+
+      <div class="nav-actions">
+        <a href="freelancer.html" class="quote-btn outline">Apply as Talent</a>
+        <a href="index.html" class="join-btn">Back to Home</a>
+      </div>
     </div>
   </nav>
 
@@ -25,7 +34,6 @@
         <p>Provide your target specifications, and our solution architects will map out a production plan within 24 hours.</p>
       </div>
 
-      <!-- PASTE YOUR GOOGLE SHEET API OR GATEWAY LINK HERE -->
       <form action="https://script.google.com/macros/s/AKfycbx4X5Z19GuyNc53BtaLo3pCEke5qMKu2DvjZAJN5zqyoEHi9QgWH3q3bwg1b1y6kEvv_Q/exec" method="POST">
         
         <div class="form-section">
@@ -52,35 +60,16 @@
           <h3>Project Metrics</h3>
           <div class="form-group">
             <label for="serviceNeeded">Primary Data Capability Required *</label>
-           <select id="serviceNeeded" name="Requested Service" required>
-  <option value="">-- Choose Segment --</option>
-
-  <option value="Data Collection">Data Collection & Sourcing</option>
-
-  <option value="Video Data Collection">
-    Video Data Collection
-  </option>
-
-  <option value="Image Annotation">
-    Image Annotation
-  </option>
-
-  <option value="Annotation">
-    Precision Annotation & Labeling
-  </option>
-
-  <option value="Language Services">
-    Multilingual Sourcing & Translation
-  </option>
-
-  <option value="Media Services">
-    Voiceover, Dubbing & Audio Inputs
-  </option>
-
-  <option value="AI Training Data">
-    RLHF, Tuning & Model Red-Teaming
-  </option>
-</select>
+            <select id="serviceNeeded" name="Requested Service" required>
+              <option value="">-- Choose Segment --</option>
+              <option value="Data Collection">Data Collection & Sourcing</option>
+              <option value="Video Data Collection">Video Data Collection</option>
+              <option value="Image Annotation">Image Annotation</option>
+              <option value="Annotation">Precision Annotation & Labeling</option>
+              <option value="Language Services">Multilingual Sourcing & Translation</option>
+              <option value="Media Services">Voiceover, Dubbing & Audio Inputs</option>
+              <option value="AI Training Data">RLHF, Tuning & Model Red-Teaming</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="projectDescription">Scope Description & Technical Parameters *</label>
@@ -105,5 +94,15 @@
     <p>&copy; 2026 Elrenium Labs. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+  </script>
 </body>
 </html>
